@@ -1,0 +1,47 @@
+name: Publicar Nossa História no GitHub Pages
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'ruan-thalita-album-surpresa-para-publicar.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Baixar arquivos do repositório
+        uses: actions/checkout@v4
+      - name: Extrair site e fotos
+        run: |
+          test -s ruan-thalita-album-surpresa-para-publicar.zip || (echo 'Arquivo ZIP do álbum não encontrado'; exit 1)
+          mkdir -p _site
+          unzip -q -o ruan-thalita-album-surpresa-para-publicar.zip -d _site
+          test -f _site/index.html || (echo 'index.html não encontrado'; exit 1)
+          total=$(find _site/imagens -type f -iname '*.jpg' | wc -l)
+          echo "Fotografias encontradas: $total"
+          test "$total" -eq 28 || (echo 'Esperadas 28 fotografias'; exit 1)
+          touch _site/.nojekyll
+      - name: Preparar GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+      - name: Enviar artefato do site
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Publicar página
+        id: deployment
+        uses: actions/deploy-pages@v4
