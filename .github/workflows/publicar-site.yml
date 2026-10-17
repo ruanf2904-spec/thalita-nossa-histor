@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'ruan-thalita-album-surpresa-para-publicar.zip'
+      - 'surpresa-1-ano-e-meio.html'
+      - '.github/workflows/publicar-site.yml'
   workflow_dispatch:
 
 permissions:
@@ -30,6 +32,8 @@ jobs:
           mkdir -p _site
           unzip -q -o ruan-thalita-album-surpresa-para-publicar.zip -d _site
           test -f _site/index.html || (echo 'index.html não encontrado'; exit 1)
+          cp surpresa-1-ano-e-meio.html _site/surpresa-1-ano-e-meio.html
+          test -s _site/surpresa-1-ano-e-meio.html || (echo 'Surpresa não encontrada'; exit 1)
           total=$(find _site/imagens -type f -iname '*.jpg' | wc -l)
           echo "Fotografias encontradas: $total"
           test "$total" -eq 28 || (echo 'Esperadas 28 fotografias'; exit 1)
