@@ -152,13 +152,15 @@ function run(){
   schedule(reveal,750);
   return;
  }
- schedule(function(){progress.style.width="34%";percent.textContent="34%";terminal.innerHTML="Localizando a pessoa mais especial...<br><strong>Identificada: VIDA ❤️</strong>";},550);
- schedule(function(){progress.style.width="70%";percent.textContent="70%";terminal.innerHTML="Calculando nível de paixão...<br><strong>Resultado: INFINITO ♾️</strong>";},1150);
- schedule(function(){progress.style.width="100%";percent.textContent="100%";terminal.innerHTML="Ameaça detectada: AMOR DEMAIS!<br><strong>Iniciando transformação do sistema...</strong>";},1850);
- schedule(function(){changeScreen("phase-white","🤍","O SISTEMA FOI DOMINADO PELO AMOR");},2450);
- schedule(function(){changeScreen("phase-pink","💗","CONTÁGIO ROMÂNTICO EM ANDAMENTO");},3420);
- schedule(function(){changeScreen("phase-red","❤️","CORAÇÃO 100% INFECTADO");},4390);
- schedule(function(){reveal();},5620);
+ schedule(function(){progress.style.width="18%";percent.textContent="18%";terminal.innerHTML="Escaneando coração...<br><strong>Arquivo suspeito: VIDA.exe 💘</strong>";},650);
+ schedule(function(){progress.style.width="38%";percent.textContent="38%";terminal.innerHTML="Localizando a pessoa mais especial...<br><strong>Identificada: VIDA ❤️</strong>";},1450);
+ schedule(function(){progress.style.width="62%";percent.textContent="62%";terminal.innerHTML="Calculando nível de paixão...<br><strong>Resultado: INFINITO ♾️</strong>";},2550);
+ schedule(function(){progress.style.width="86%";percent.textContent="86%";terminal.innerHTML="Analisando sentimentos...<br><strong>Alerta: saudade e amor sem limites! 💕</strong>";},3550);
+ schedule(function(){progress.style.width="100%";percent.textContent="100%";terminal.innerHTML="Ameaça detectada: AMOR DEMAIS!<br><strong>Iniciando transformação do sistema...</strong>";},4350);
+ schedule(function(){changeScreen("phase-white","🤍","O SISTEMA FOI DOMINADO PELO AMOR");},5050);
+ schedule(function(){changeScreen("phase-pink","💗","CONTÁGIO ROMÂNTICO EM ANDAMENTO");},6020);
+ schedule(function(){changeScreen("phase-red","❤️","CORAÇÃO 100% INFECTADO");},6990);
+ schedule(function(){reveal();},8220);
 }
 document.getElementById("replay").addEventListener("click",run);
 run();
