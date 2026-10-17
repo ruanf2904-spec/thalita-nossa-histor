@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#190c17">
+<meta name="description" content="Uma surpresa de um ano e meio de namoro: Ruan e Thalita.">
+<meta property="og:title" content="🚨 Uma surpresa para Thalita 💘">
+<meta property="og:description" content="Atenção: um vírus de amor foi detectado!">
+<meta property="og:type" content="website">
+<title>ALERTA 💘 | Ruan & Thalita</title>
+<style>
+:root{color-scheme:dark;--bg:#190c17;--hot:#ff3c82;--soft:#ffd5e2;--w:#fff9fc}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+body{background:var(--bg);color:#fff;overflow-x:hidden}
+button,a{font:inherit}button{cursor:pointer}
+button:focus-visible,a:focus-visible{outline:3px solid #fff;outline-offset:4px}
+.background{position:fixed;inset:0;z-index:-2;background:radial-gradient(ellipse at 50% 50%,#6c1b43 0%,#190c17 75%);transition:background-color .45s ease,opacity .45s;opacity:1}
+.background:after{content:"";position:absolute;inset:0;opacity:.26;pointer-events:none;background-image:linear-gradient(transparent 50%,#0002 50%);background-size:100% 5px}
+body.phase-white{background:#fff;color:#58213c}
+body.phase-pink{background:#ffb6d2;color:#68133e}
+body.phase-red{background:#d7194d;color:#fff}
+body.phase-white .background,body.phase-pink .background,body.phase-red .background{opacity:0}
+body.phase-final{background:radial-gradient(circle at 30% 15%,#ee5a84 0%,#a81f50 47%,#4c153d 100%);color:#fff}
+body.phase-final .background{opacity:0}
+#main{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:27px 20px 42px;position:relative;isolation:isolate}
+.scan{width:min(600px,100%);background:#0d0d12f2;border:1px solid #ff3c8266;box-shadow:0 0 0 1px #ffffff13 inset,0 20px 70px #0009,0 0 65px #ff3c8219;border-radius:17px;padding:28px;position:relative;overflow:hidden}
+.scan:before{content:"";height:5px;background:linear-gradient(90deg,transparent,#ff3c82,transparent);position:absolute;top:0;left:-100%;width:100%;animation:scanline 1.9s linear infinite}
+@keyframes scanline{to{left:100%}}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;border-bottom:1px solid #ffadc039;padding-bottom:15px;font-size:12px;letter-spacing:.15em;color:#f5b5ca}
+.topbar .dots{display:flex;gap:6px}.dots i{width:9px;height:9px;border-radius:50%;background:#fd5186;display:block}.dots i:nth-child(2){background:#ffc9db}.dots i:nth-child(3){background:#e787a8}
+.warning{font-size:clamp(39px,9vw,76px);font-weight:900;line-height:1;letter-spacing:-.055em;margin:28px 0 14px;color:#fff;text-shadow:3px 2px 0 #fa307e}
+.glitch{display:inline-block;animation:shimmy 1.15s steps(1) infinite}
+@keyframes shimmy{0%,90%,100%{transform:none}92%{transform:translateX(-2px);text-shadow:3px 0 #0cf, -3px 0 #ff3c82}95%{transform:translateX(2px)}}
+.terminal-line{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:clamp(12px,3.2vw,15px);color:#ffdce8;line-height:1.8;min-height:58px}
+.terminal-line strong{color:#ff7caa}
+.progress-shell{height:12px;border:1px solid #ff97b8;border-radius:99px;padding:2px;margin-top:23px;background:#2c1526}
+.progress{height:100%;width:0;background:linear-gradient(90deg,#f72b76,#ffd2e3);border-radius:99px;transition:width .23s ease}
+.progress-label{color:#ed9db7;font-family:monospace;display:flex;justify-content:space-between;margin-top:12px;font-size:12px}
+.mini{margin-top:30px;color:#d78ca5;font-size:12px;letter-spacing:.09em}
+.flash-word{font-size:clamp(43px,10vw,97px);font-weight:950;line-height:.98;letter-spacing:-.07em;max-width:950px;text-align:center;padding:0 12px;filter:drop-shadow(0 7px 20px #59102f4c);animation:pop .55s ease both}
+@keyframes pop{from{transform:scale(.93);opacity:.4}to{transform:scale(1);opacity:1}}
+.flash-word small{display:block;font-size:clamp(13px,2.8vw,19px);font-weight:700;letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px}
+.center{width:min(850px,100%);text-align:center;position:relative;z-index:2}
+.eyebrow{text-transform:uppercase;font-size:clamp(10px,2vw,14px);font-weight:800;letter-spacing:.31em;color:#ffe4ed;margin-bottom:19px}
+h1{font-size:clamp(50px,10.2vw,100px);font-weight:900;letter-spacing:-.073em;line-height:1.02;margin:0 0 17px;text-shadow:0 9px 30px #3d092a44}
+h1 span{display:block;color:#fff0b9;font-size:clamp(67px,14vw,134px);margin:7px 0 4px}
+.subtitle{font-family:Georgia,serif;font-size:clamp(23px,4.4vw,40px);font-style:italic;margin:18px 0 23px;color:#ffe4ef}
+.message{max-width:550px;font-size:clamp(14px,2.4vw,18px);line-height:1.9;color:#fff2f6;margin:15px auto 28px}
+.message strong{color:#fff1b8}
+.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.action{color:#69183d;background:#fff8f8;border:1px solid #ffffffa8;border-radius:100px;padding:14px 21px;font-weight:800;text-decoration:none;box-shadow:0 10px 28px #51112e40;transition:transform .2s}
+.action.secondary{color:#fff;background:#ffffff1a;border-color:#ffffff7d}
+.action:hover{transform:translateY(-3px)}
+#hearts{position:fixed;inset:0;pointer-events:none;z-index:1;overflow:hidden}
+.heart{position:absolute;top:-18vh;left:var(--x);font-size:var(--sz);line-height:1;filter:drop-shadow(0 4px 6px #5d164050);opacity:.94;animation:fall var(--dur) linear var(--delay) infinite;will-change:transform}
+@keyframes fall{0%{transform:translate3d(0,-20vh,0) rotate(-20deg);opacity:0}9%{opacity:1}90%{opacity:1}100%{transform:translate3d(var(--drift),130vh,0) rotate(70deg);opacity:0}}
+.heart-glow{position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 50% 45%,#ff9db244,transparent 55%);pointer-events:none}
+.blink{animation:breath .85s ease-in-out alternate infinite}
+@keyframes breath{from{opacity:.88}to{opacity:1}}
+[hidden]{display:none!important}
+@media (max-width:520px){.scan{padding:21px}.topbar{font-size:9px}.mini{font-size:10px}.actions{flex-direction:column;align-items:stretch}.action{width:100%}h1{font-size:clamp(46px,11vw,64px)}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.heart{display:none}.glitch{animation:none}}
+</style>
+</head>
+<body>
+<div class="background" aria-hidden="true"></div>
+<main id="main">
+  <section class="scan" id="scan" aria-label="Alerta de brincadeira">
+    <div class="topbar"><span>LOVE SECURITY // v1.5</span><span class="dots" aria-hidden="true"><i></i><i></i><i></i></span></div>
+    <div class="warning"><span class="glitch">⚠ ALERTA!</span></div>
+    <p class="terminal-line" id="terminal">Escaneando coração...<br><strong>Arquivo suspeito encontrado: THALITA.exe 💘</strong></p>
+    <div class="progress-shell"><div class="progress" id="progress"></div></div>
+    <div class="progress-label"><span>DETECTANDO AMOR...</span><span id="percent">0%</span></div>
+    <p class="mini">NÃO SE ASSUSTE... É SÓ UMA SURPRESA 💗</p>
+  </section>
+  <div class="flash-word blink" id="transition" hidden role="status" aria-live="polite"></div>
+  <section class="center" id="final" hidden>
+    <div class="eyebrow">💌 Mensagem secreta desbloqueada 💌</div>
+    <h1>Feliz <span>1 ano e meio</span> de namoro!</h1>
+    <div class="subtitle">Te amo, Thalita! ❤️</div>
+    <p class="message">O único vírus aqui é o amor que eu sinto por você. Desde <strong>17 de abril de 2025</strong>, meu mundo ficou muito mais bonito com você nele. Que venham muitos outros meses, anos, sonhos e momentos nossos. <strong>Eu escolheria você mil vezes.</strong></p>
+    <div class="actions">
+      <button class="action" type="button" id="replay">💗 Ver a surpresa de novo</button>
+      <a class="action secondary" href="./">📸 Ver nossa história</a>
+    </div>
+  </section>
+</main>
+<div class="heart-glow" id="heartglow" hidden aria-hidden="true"></div>
+<div id="hearts" aria-hidden="true"></div>
+<script>
+(function(){
+"use strict";
+var scan=document.getElementById("scan");
+var final=document.getElementById("final");
+var transition=document.getElementById("transition");
+var progress=document.getElementById("progress");
+var percent=document.getElementById("percent");
+var terminal=document.getElementById("terminal");
+var hearts=document.getElementById("hearts");
+var heartglow=document.getElementById("heartglow");
+var timerIds=[],generation=0;
+var reduced=window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function schedule(f,ms){timerIds.push(setTimeout(f,ms));}
+function reset(){
+ generation++;
+ timerIds.forEach(clearTimeout);timerIds=[];
+ document.body.className="";
+ scan.hidden=false;transition.hidden=true;final.hidden=true;heartglow.hidden=true;
+ hearts.replaceChildren();
+ progress.style.width="0%";percent.textContent="0%";
+ terminal.innerHTML="Escaneando coração...<br><strong>Arquivo suspeito encontrado: THALITA.exe 💘</strong>";
+ window.scrollTo({top:0,behavior:"instant"});
+}
+function changeScreen(cls,word,extra){
+ document.body.className=cls;
+ scan.hidden=true;final.hidden=true;transition.hidden=false;
+ transition.innerHTML="<small>"+extra+"</small>"+word;
+}
+function rainingHearts(){
+ hearts.replaceChildren();
+ var symbols=["❤️","💗","💕","💖","💘","♥","💝"];
+ for(var i=0;i<85;i++){
+  var e=document.createElement("span");
+  e.className="heart";
+  e.textContent=symbols[i%symbols.length];
+  e.style.setProperty("--x",String(Math.round(Math.random()*100))+"%");
+  e.style.setProperty("--sz",String(Math.round(17+Math.random()*34))+"px");
+  e.style.setProperty("--dur",String((3.4+Math.random()*3).toFixed(2))+"s");
+  e.style.setProperty("--delay",String((-Math.random()*5).toFixed(2))+"s");
+  e.style.setProperty("--drift",String(Math.round(-80+Math.random()*160))+"px");
+  hearts.appendChild(e);
+ }
+ heartglow.hidden=false;
+}
+function reveal(){
+ document.body.className="phase-final";
+ scan.hidden=true;transition.hidden=true;final.hidden=false;
+ if(!reduced){rainingHearts();}
+}
+function run(){
+ reset();
+ if(reduced){
+  terminal.textContent="Surpresa de amor carregada.";
+  schedule(reveal,750);
+  return;
+ }
+ schedule(function(){progress.style.width="34%";percent.textContent="34%";terminal.innerHTML="Localizando a pessoa mais especial...<br><strong>Identificada: THALITA ❤️</strong>";},550);
+ schedule(function(){progress.style.width="70%";percent.textContent="70%";terminal.innerHTML="Calculando nível de paixão...<br><strong>Resultado: INFINITO ♾️</strong>";},1150);
+ schedule(function(){progress.style.width="100%";percent.textContent="100%";terminal.innerHTML="Ameaça detectada: AMOR DEMAIS!<br><strong>Iniciando transformação do sistema...</strong>";},1850);
+ schedule(function(){changeScreen("phase-white","🤍","O SISTEMA FOI DOMINADO PELO AMOR");},2450);
+ schedule(function(){changeScreen("phase-pink","💗","CONTÁGIO ROMÂNTICO EM ANDAMENTO");},3420);
+ schedule(function(){changeScreen("phase-red","❤️","CORAÇÃO 100% INFECTADO");},4390);
+ schedule(function(){reveal();},5620);
+}
+document.getElementById("replay").addEventListener("click",run);
+run();
+})();
+</script>
+</body>
+</html>
